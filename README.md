@@ -18,17 +18,14 @@ Professor:
 
 ## Tabelas:
 
-### Tabela _historico_aluno_:
-A tabela "historico_aluno" é uma junção das entidades "historico" e "aluno", a junção dessas entidades resulta na criação desta tabela, que armazenará os atributos das entidades em uma só tabela. 
+### Tabela _aluno_:
+A tabela "aluno" é responsável por armazenar os dados dos aluno, como: matricula, nome, endereço e cidade.
 Nesta tabela, teremos como atributos/colunas:
 
-- mat: matrícula do aluno (atributo identificador da entidade _aluno_)
-- id_historico: identificador do histórico do aluno (atributo identificador da entidade _historico_)
+- mat: chave primária
 - nome: nome do aluno
 - endereco: endereço do aluno
 - cidade: cidade em que o aluno mora
-- frequencia: frequencia do aluno
-- nota: nota do aluno
 
 
 ### Tabela _possuir_:
@@ -84,5 +81,13 @@ Nesta tabela, teremos como atributos/colunas:
 - fk_turma_cod_turma: chave estrangeira que faz referência a _turma_
 - fk_disciplina_cod_disc: chave estrangeira que faz referência a _disciplinas_
 
+
+### Tabela _historico_:
+A tabela "historico" é a responsável por armazenar o histórico do aluno, por meio de sua frequencia e de suas notas.
+Nesta tabela, teremos como atributos/colunas::
+
+- id_historico: chave primária
+- frequencia: frequencia do aluno
+- nota: nota do aluno
 
 
