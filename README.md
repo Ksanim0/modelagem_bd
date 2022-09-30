@@ -10,10 +10,10 @@ Professor:
 - Adeilson
 
 ## Modelo Conceitual:
-<img src="modelo_conceitual.png">
+<img src="Modelo_Conceitual.png">
 
 ## Modelo Lógico:
-<img src="modelo_logico.png">
+<img src="Modelo_Logico.png">
 
 
 ## Tabelas:
