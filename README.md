@@ -18,15 +18,17 @@ Professor:
 
 ## Tabelas:
 
-### Tabela _aluno_:
-A tabela "aluno" é responsável por armazenar as informções de cada aluno, como: Matrícula, Nome do Aluno, Endereço, Cidade.
+### Tabela _historico_aluno_:
+A tabela "historico_aluno" é uma junção das entidades "historico" e "aluno", a junção dessas entidades resulta na criação desta tabela, que armazenará os atributos das entidades em uma só tabela. 
 Nesta tabela, teremos como atributos/colunas:
 
-- mat: matrícula do aluno (atributo identificador)
+- mat: matrícula do aluno (atributo identificador da entidade _aluno_)
+- id_historico: identificador do histórico do aluno (atributo identificador da entidade _historico_)
 - nome: nome do aluno
 - endereco: endereço do aluno
 - cidade: cidade em que o aluno mora
-- fk_historico_id_historico: chave estrangeira que faz referência a _historico_
+- frequencia: frequencia do aluno
+- nota: nota do aluno
 
 
 ### Tabela _possuir_:
@@ -52,7 +54,7 @@ A tabela "professores" é responsável por armazenar os dados dos professores, c
 Nesta tabela, teremos como atributos/colunas:
 
 - cod_prof: chave primária
-- nome: nome do professor
+- nome_prof: nome do professor
 - endereco_prof: endereço do professor
 - cidade_prof: cidade do professor
 
@@ -72,7 +74,7 @@ Nesta tabela, teremos como atributos/colunas:
 - cod_turma: chave primária
 - ano: ano da turma
 - horario: horário da turma
-- fk_historico_id_historico: chave estrangeira que faz referência a _historico_
+
 
 
 ### Tabela _aula_:
@@ -83,10 +85,4 @@ Nesta tabela, teremos como atributos/colunas:
 - fk_disciplina_cod_disc: chave estrangeira que faz referência a _disciplinas_
 
 
-### Tabela _historico_:
-A tabela "historico" será responsável por armazenar os itens que compõem o histórico do aluno, como: a frequencia e as notas.
-Nesta tabela, teremos como atributos/colunas:
 
-- id_historico: chave primária
-- frequencia: frequência do aluno
-- nota: notas do aluno
